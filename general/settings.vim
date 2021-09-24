@@ -1,3 +1,7 @@
+set nocompatible			" be iMproved, required
+filetype plugin indent on		" required
+syntax on
+
 set colorcolumn=80
 set number
 set nowrap
