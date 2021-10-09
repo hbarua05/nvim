@@ -25,3 +25,4 @@ set clipboard+=unnamedplus
 
 set rnu
 
+source $HOME/.config/nvim/general/telescope.vim
