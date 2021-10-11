@@ -52,4 +52,15 @@ for _, lsp in ipairs(servers) do
     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   }
 end
+
+-- Using a different loop for this as it requires slightly
+-- different configuration
+local web_dev_servers = {'html', 'cssls'}
+for _, lsp in ipairs(web_dev_servers) do
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    require('lspconfig')[lsp].setup {
+        capabilities = capabilities
+    }
+end
 EOF

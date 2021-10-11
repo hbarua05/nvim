@@ -19,6 +19,9 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
+"Autopair Brackets
+Plug 'jiangmiao/auto-pairs'
+
 Plug 'ThePrimeagen/vim-be-good'
 
 " Initialize plugin system
