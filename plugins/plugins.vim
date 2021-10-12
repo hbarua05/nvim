@@ -22,6 +22,9 @@ Plug 'hrsh7th/vim-vsnip'
 "Autopair Brackets
 Plug 'jiangmiao/auto-pairs'
 
+" Git Fugitive
+Plug 'tpope/vim-fugitive'
+
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
