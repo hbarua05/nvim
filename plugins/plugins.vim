@@ -22,6 +22,14 @@ Plug 'hrsh7th/vim-vsnip'
 "Autopair Brackets
 Plug 'jiangmiao/auto-pairs'
 
+"Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" For Processing-java
+Plug 'sophacles/vim-processing'
+
+
 Plug 'ThePrimeagen/vim-be-good'
 
 " Initialize plugin system
