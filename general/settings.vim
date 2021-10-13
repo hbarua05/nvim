@@ -25,6 +25,12 @@ set clipboard+=unnamedplus
 
 set rnu
 
+" Mouse Scrollable (in mormal mode only)
+set mouse=n
+
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
+
 source $HOME/.config/nvim/general/telescope.vim
 source $HOME/.config/nvim/general/lsp_settings.vim
 source $HOME/.config/nvim/general/airline.vim
