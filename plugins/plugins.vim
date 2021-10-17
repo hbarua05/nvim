@@ -29,6 +29,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Seeing code outline
+Plug 'preservim/tagbar'
+
 " For Processing-java
 Plug 'sophacles/vim-processing'
 

@@ -64,9 +64,25 @@ lua <<EOF
     }
   })
 
+-- Not show diagnostics
+local lsp = vim.lsp
+
+lsp.handlers['textDocument/publishDiagnostics'] = lsp.with(lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    signs = true,
+    virtual_text = false,
+    update_in_insert = true,
+})
+
+local popup_opts = { border = 'rounded', focusable = false }
+
+lsp.handlers['textDocument/signatureHelp'] = lsp.with(lsp.handlers.signature_help, popup_opts)
+
+
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pylsp', 'tsserver' }
+local servers = { 'pylsp', 'pyright', 'tsserver', 'clangd' }
 for _, lsp in ipairs(servers) do
   require('lspconfig')[lsp].setup {
     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())

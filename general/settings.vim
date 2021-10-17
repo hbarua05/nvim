@@ -34,3 +34,4 @@ nnoremap <CR> :noh<CR><CR>
 source $HOME/.config/nvim/general/telescope.vim
 source $HOME/.config/nvim/general/lsp_settings.vim
 source $HOME/.config/nvim/general/airline.vim
+source $HOME/.config/nvim/general/tagbar.vim
