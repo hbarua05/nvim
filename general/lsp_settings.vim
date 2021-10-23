@@ -21,10 +21,10 @@ nnoremap <silent> <space>f <cmd>lua vim.lsp.buf.formatting()<CR>
 
 
 lua <<EOF
-  -- Setup nvim-cmp.
-  local cmp = require'cmp'
+-- Setup nvim-cmp.
+local cmp = require'cmp'
 
-  cmp.setup({
+cmp.setup({
     snippet = {
       expand = function(args)
         -- For `vsnip` user.
@@ -60,9 +60,25 @@ lua <<EOF
       -- For ultisnips user.
       -- { name = 'ultisnips' },
 
+      { name = 'path' },
       { name = 'buffer' },
-    }
-  })
+    },
+    formatting = {
+      format = require("lspkind").cmp_format({
+      with_text = true, 
+      menu = ({
+              buffer = "[Buffer]",
+              nvim_lsp = "[LSP]",
+              vsnip = "[VSnip]",
+              nvim_lua = "[Lua]",
+              path="[Path]",
+          })
+      }),
+    },
+    experimental = {
+        ghost_text = true,
+    },
+})
 
 -- Not show diagnostics
 local lsp = vim.lsp

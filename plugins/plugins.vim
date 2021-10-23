@@ -1,6 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" Theme
 Plug 'morhetz/gruvbox'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 " Telescope Stuff
 Plug 'kyazdani42/nvim-web-devicons'
@@ -19,18 +21,25 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-"Autopair Brackets
+" Autopair Brackets
 Plug 'jiangmiao/auto-pairs'
 
 " Git Fugitive
 Plug 'tpope/vim-fugitive'
 
-"Airline
+" Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Seeing code outline
 Plug 'preservim/tagbar'
+
+" For Comments
+Plug 'preservim/nerdcommenter'
+Plug 'cometsong/CommentFrame.vim'
+
+" Icons in autocomplete menu
+Plug 'onsails/lspkind-nvim'
 
 " For Processing-java
 Plug 'sophacles/vim-processing'
