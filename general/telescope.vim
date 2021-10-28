@@ -1,7 +1,36 @@
 lua << EOF
 require('telescope').setup{
     defaults = {
-        prompt_prefix = "$ ",
+        selection_caret = "👉 ",
+        prompt_prefix = "🔍 ",
+        file_ignore_patterns = {
+            "^node_modules/",
+            "^env/", 
+            "^__pycache__/",
+            -- Ignore images
+            "%.jpg",
+            "%.gif",
+            "%.png",
+            "%.svg",
+            "%.ico",
+            -- Ignore videos
+            "%.wmv",
+            "%.mpg",
+            "%.mpeg",
+            "%.mp4",
+            "%.mov",
+            "%.flv",
+            "%.avi",
+            "%.ogv",
+            "%.ogg",
+            "%.webm",
+            -- Ignore audio
+            "%.wav",
+            "%.mp3",
+            "%.wma",
+            -- Latex
+            "Tex",
+        },
     }
 }
 EOF
