@@ -44,6 +44,9 @@ Plug 'onsails/lspkind-nvim'
 " For Processing-java
 Plug 'sophacles/vim-processing'
 
+" For Markdown Preview
+" this is not the official repo, change the repo once feature is merged
+Plug 'Alkindi42/markdown-preview.nvim', { 'branch': 'feat/add-theme-option', 'do': 'cd app && yarn install'  }
 
 Plug 'ThePrimeagen/vim-be-good'
 
